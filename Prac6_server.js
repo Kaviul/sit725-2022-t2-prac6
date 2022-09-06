@@ -9,23 +9,65 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
+
+app.get('/addTwoNumbers/:n1/:n2', function(request, response){
+  response.sendStatus(200);
+  //response.json({statusCode: 300});
+  //response.json(8)
+})
+
+app.get('/addTwoNumbers/:n1/:n2', function(request, response){
+  //response.sendStatus(200);
+  response.json({statusCode: 300});
+
+})
+
+// app.get('/addTwoNumbers/:n1/:n2', function(request, response){
+//   response.sendStatus(200);
+//   //response.json({statusCode: 300});
+//   //response.json(8)
+// })
+
+// app.get('/addTwoNumbers/:n1/:n2', function(request, response){
+//   //response.sendStatus(200);
+//   response.json({statusCode: 400});
+
+// })
+
+
+app.get('/api/projects', function(request, response){
+  response.sendStatus(200);
+  //response.json({statusCode: 200});
+
+})
+
+app.get('/projects/:array', function(request, response){
+  response.json({statusCode: 200});
+ })
+
+// app.get('/api/projects', function(request, response){
+//   response.sendStatus(200);
+//   //response.json({statusCode: 200});
+
+// })
+
 // const MongoClient = require('mongoDb').MongoClient; 
 
 // const uri = "mongodb+srv://kaviuln1:kaviuln@kncluster-1.ieurp6n.mongodb.net/?retryWrites=true&w=majority"
 // const client = new MongoClient(uri, {useNewUrlParser: true});
 
-// const createCollection = (collectionName) => {
-//     client.connect((err,db) => {
-//         projectCollection = client.db().collection(collectionName);
-//         if(!err) {
-//             console.log('Database MongoDb Connected!')
-//         }
-//         else{
-//             console.log("No DB connected, err: ", err);
-//             process.exit(1);
-//         }
-//     })
-// }
+// // const createCollection = (collectionName) => {
+// //     client.connect((err,db) => {
+// //         projectCollection = client.db().collection(collectionName);
+// //         if(!err) {
+// //             console.log('Database MongoDb Connected!')
+// //         }
+// //         else{
+// //             console.log("No DB connected, err: ", err);
+// //             process.exit(1);
+// //         }
+// //     })
+// // }
 
 // const insertProjects = (project, callback) => {
 //   projectCollection.insert(project,callback);
@@ -86,31 +128,11 @@ app.use(cors());
 //     res.sendFile(__dirname+'/public/Prac4_index.html');
 // })
 
-// app.get('/addTwoNumbers/:n1/:n2', function(request, response){
-//   //response.sendStatus(200);
-//   response.json({statusCode: 400});
-  
-
-// })
 
 
-app.get('/addTwoNumbers/:n1/:n2', function(request, response){
-  response.sendStatus(200);
-  //response.json({statusCode: 400});
 
-})
 
-// app.get('/addTwoNumbers/:n1/:n2', function(request, response){
-//   //response.sendStatus(200);
-//   response.json({statusCode: 200});
 
-// })
-
-app.get('/api/projects', function(request, response){
-  response.sendStatus(200);
-  //response.json({statusCode: 200});
-
-})
 
 var port = process.env.port || 8080;
 
