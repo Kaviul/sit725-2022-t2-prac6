@@ -19,20 +19,20 @@ app.get('/addTwoNumbers/:n1/:n2', function(request, response){
 
 })
 
-app.get('/addTwoNumbers/:n1/:n2', function(request, response){
-  response.sendStatus(400);
+// app.get('/addTwoNumbers/:n1/:n2', function(request, response){
+//   response.sendStatus(400);
 
-})
+// })
 
 
-app.get('/api/projects', function(request, response){
-  response.sendStatus(200);
+// app.get('/api/projects', function(request, response){
+//   response.sendStatus(200);
 
-})
+// })
 
-app.get('/projects/:array', function(request, response){
-  response.sendStatus(200);
-})
+// app.get('/projects/:array', function(request, response){
+//   response.sendStatus(200);
+// })
 
 
 
